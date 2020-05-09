@@ -9,13 +9,12 @@ const config: Config = {
 };
 const vrt = new VisualRegressionTracker(config);
 
-
 describe('Playwright example', () => {
 
     let browser: Browser
     let context: BrowserContext
     let page: Page
-    const capabilities = {
+    const imageOptions = {
         os: "Mac",
         browser: "Chrome",
         viewport: "800x600",
@@ -39,7 +38,7 @@ describe('Playwright example', () => {
         await vrt.track({
             name: "Search page",
             imageBase64: (await page.screenshot()).toString('base64'),
-            ...capabilities
+            ...imageOptions
         });
 
         await page.type("[name='q']", 'Visual regression tracker')
@@ -49,7 +48,7 @@ describe('Playwright example', () => {
         await vrt.track({
             name: "Result page",
             imageBase64: (await page.screenshot()).toString('base64'),
-            ...capabilities
+            ...imageOptions
         });
     })
 })
