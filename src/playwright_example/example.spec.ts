@@ -1,7 +1,5 @@
-import { chromium, Browser, Page } from 'playwright'
-import { VisualRegressionTracker } from '@visual-regression-tracker/sdk-js'
-import { Config } from '@visual-regression-tracker/sdk-js/dist/types';
-import { Context } from 'vm';
+import { chromium, Browser, Page, BrowserContext } from 'playwright'
+import { VisualRegressionTracker, Config } from '@visual-regression-tracker/sdk-js'
 
 const config: Config = {
     apiUrl: "http://localhost:4200",
@@ -15,7 +13,7 @@ const vrt = new VisualRegressionTracker(config);
 describe('Playwright example', () => {
 
     let browser: Browser
-    let context: Context
+    let context: BrowserContext
     let page: Page
     const capabilities = {
         os: "Mac",
@@ -38,7 +36,7 @@ describe('Playwright example', () => {
     it('Search', async () => {
         await page.goto('https://google.com/');
 
-        await vrt.submitTestResult({
+        await vrt.track({
             name: "Search page",
             imageBase64: (await page.screenshot()).toString('base64'),
             ...capabilities
@@ -48,7 +46,7 @@ describe('Playwright example', () => {
         await page.press("[name='q']", 'Enter');
         await page.waitForSelector('#search');
 
-        await vrt.submitTestResult({
+        await vrt.track({
             name: "Result page",
             imageBase64: (await page.screenshot()).toString('base64'),
             ...capabilities
