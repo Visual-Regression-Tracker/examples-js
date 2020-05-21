@@ -18,7 +18,7 @@
   "homepage": "https://github.com/Visual-Regression-Tracker/vrt-examples-js#readme",
   "jest": {},
   "dependencies": {
-    "@visual-regression-tracker/sdk-js": "0.0.6"
+    "@visual-regression-tracker/sdk-js": "0.0.7"
   },
   "devDependencies": {
     "@types/jest": "^25.2.1",
