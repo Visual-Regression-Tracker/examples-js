@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:sdk_playwright": "jest ./src/playwright/sdk.spec.ts",
+    "test:agent_playwright": "jest ./src/playwright/playwright.spec.ts"
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,7 @@
   "homepage": "https://github.com/Visual-Regression-Tracker/vrt-examples-js#readme",
   "jest": {},
   "dependencies": {
+    "@visual-regression-tracker/agent-playwright": "0.0.3",
     "@visual-regression-tracker/sdk-js": "0.0.7"
   },
   "devDependencies": {
