@@ -7,8 +7,8 @@ import {
 const config: Config = {
   apiUrl: "http://localhost:4200",
   branchName: "develop",
-  projectId: "733c148e-ef70-4e6d-9ae5-ab22263697cc",
-  token: "BAZ0EG0PRH4CRQPH19ZKAVADBP9E",
+  projectId: "90e3b95d-6468-4771-a2e7-7bc7d3ca2b1b",
+  apiKey: "W5KJ9ZGXRV458AH1XZEJ8WF284ED",
 };
 
 describe("Playwright example", () => {
