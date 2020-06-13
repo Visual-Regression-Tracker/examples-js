@@ -3,12 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "jest",
-    "test:sdk_playwright": "jest ./src/playwright/sdk.spec.ts",
-    "test:agent_playwright": "jest ./src/playwright/playwright.spec.ts"
-  },
-  "repository": {
+   "repository": {
     "type": "git",
     "url": "git+https://github.com/Visual-Regression-Tracker/vrt-examples-js.git"
   },
@@ -17,18 +12,5 @@
   "bugs": {
     "url": "https://github.com/Visual-Regression-Tracker/vrt-examples-js/issues"
   },
-  "homepage": "https://github.com/Visual-Regression-Tracker/vrt-examples-js#readme",
-  "jest": {},
-  "dependencies": {
-    "@visual-regression-tracker/agent-playwright": "0.0.5",
-    "@visual-regression-tracker/sdk-js": "0.0.8"
-  },
-  "devDependencies": {
-    "@types/jest": "^25.2.1",
-    "@types/node": "^13.13.5",
-    "jest": "^25.0.0",
-    "playwright": "^1.0.1",
-    "ts-jest": "^25.5.1",
-    "typescript": "^3.8.3"
-  }
+  "homepage": "https://github.com/Visual-Regression-Tracker/vrt-examples-js#readme"
 }
