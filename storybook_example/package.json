@@ -1,0 +1,16 @@
+{
+  "name": "storybook_example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@visual-regression-tracker/agent-playwright": "0.0.5",
+    "jest": "^26.0.1",
+    "playwright": "^1.1.1"
+  }
+}
