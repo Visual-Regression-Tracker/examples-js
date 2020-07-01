@@ -7,8 +7,8 @@ import {
 const config: Config = {
   apiUrl: "http://localhost:4200",
   branchName: "develop",
-  projectId: "733c148e-ef70-4e6d-9ae5-ab22263697cc",
-  apiKey: "BAZ0EG0PRH4CRQPH19ZKAVADBP9E",
+  projectId: "5a0b9771-5deb-4edb-abe7-65c3919ce204",
+  apiKey: "F3GCS56KVA4168HAN53YN31ASSVG",
 };
 
 describe("Playwright example", () => {
@@ -19,13 +19,8 @@ describe("Playwright example", () => {
   let vrt: PlaywrightVisualRegressionTracker;
 
   beforeAll(async () => {
-    browser = await browserType.launch({ headless: true });
-    context = await browser.newContext({
-      viewport: {
-        width: 1800,
-        height: 1600,
-      },
-    });
+    browser = await browserType.launch({ headless: false });
+    context = await browser.newContext();
     page = await context.newPage();
     vrt = new PlaywrightVisualRegressionTracker(config, browserType);
   });
@@ -46,11 +41,11 @@ describe("Playwright example", () => {
     await vrt.track(page, "Search result page", {
       diffTollerancePercent: 0,
       screenshotOptions: {
-        fullPage: true,
+        fullPage: false,
       },
       agent: {
-        os: "Mac",
-        device: "PC",
+        os: "iOS",
+        device: "MackBook 13",
       },
     });
   });
