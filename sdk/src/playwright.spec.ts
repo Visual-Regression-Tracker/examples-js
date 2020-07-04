@@ -4,8 +4,8 @@ import { VisualRegressionTracker, Config } from '@visual-regression-tracker/sdk-
 const config: Config = {
     apiUrl: "http://localhost:4200",
     branchName: "develop",
-    projectId: "733c148e-ef70-4e6d-9ae5-ab22263697cc",
-    apiKey: "BAZ0EG0PRH4CRQPH19ZKAVADBP9E",
+    projectId: "8cf7eba6-1378-449b-99c6-2e6b9e284e44",
+    apiKey: "F3GCS56KVA4168HAN53YN31ASSVG",
 };
 const vrt = new VisualRegressionTracker(config);
 
@@ -34,7 +34,7 @@ describe('Playwright example', () => {
         await page.goto('https://google.com/');
 
         await vrt.track({
-            name: "Home page1",
+            name: "Home page",
             imageBase64: (await page.screenshot()).toString('base64')
         });
 
@@ -43,9 +43,9 @@ describe('Playwright example', () => {
         await page.waitForSelector('#search');
 
         await vrt.track({
-            name: "Search result page1",
+            name: "Search result page",
             imageBase64: (await page.screenshot({
-                fullPage: true
+                fullPage: false
             })).toString('base64'),
             os: "Mac",
             browser: "Chrome",

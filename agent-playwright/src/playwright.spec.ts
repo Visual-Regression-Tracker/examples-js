@@ -7,7 +7,7 @@ import {
 const config: Config = {
   apiUrl: "http://localhost:4200",
   branchName: "develop",
-  projectId: "5a0b9771-5deb-4edb-abe7-65c3919ce204",
+  projectId: "8cf7eba6-1378-449b-99c6-2e6b9e284e44",
   apiKey: "F3GCS56KVA4168HAN53YN31ASSVG",
 };
 
