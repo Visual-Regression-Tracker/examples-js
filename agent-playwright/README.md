@@ -1,5 +1,5 @@
 # How to use
 * Clone repo
 * Install dependencies `npm install`
-* Update configuration with your `projectId` and `token`
+* Update configuration
 * Run tests `$ npm run test`
