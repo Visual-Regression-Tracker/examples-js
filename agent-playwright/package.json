@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@visual-regression-tracker/agent-playwright": "0.0.5"
+    "@visual-regression-tracker/agent-playwright": "^2.0.0"
   },
   "devDependencies": {
     "@types/jest": "^25.2.1",
