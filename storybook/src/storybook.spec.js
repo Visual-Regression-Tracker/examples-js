@@ -3,6 +3,8 @@ const {
   PlaywrightVisualRegressionTracker,
 } = require("@visual-regression-tracker/agent-playwright");
 
+jest.setTimeout(30000);
+
 const config = {
   apiUrl: "http://localhost:4200",
   branchName: "develop",
@@ -26,8 +28,8 @@ describe("Storybook example", () => {
     vrt = new PlaywrightVisualRegressionTracker(config, browserType);
   });
 
-  afterAll(() => {
-    browser.close();
+  afterAll(async () => {
+    await browser.close();
   });
 
   it("Signle area chart", async () => {

@@ -11,6 +11,8 @@ const config: Config = {
   apiKey: "63QE97FV4YMD3QG0ARVFEG6VJM54",
 };
 
+jest.setTimeout(30000);
+
 describe("Playwright example", () => {
   let browserType = chromium;
   let browser: Browser;
@@ -25,8 +27,8 @@ describe("Playwright example", () => {
     vrt = new PlaywrightVisualRegressionTracker(config, browserType);
   });
 
-  afterAll(() => {
-    browser.close();
+  afterAll(async () => {
+    await browser.close();
   });
 
   it("Search", async () => {
