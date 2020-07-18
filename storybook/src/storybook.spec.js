@@ -8,8 +8,8 @@ jest.setTimeout(30000);
 const config = {
   apiUrl: "http://localhost:4200",
   branchName: "develop",
-  projectId: "8cf7eba6-1378-449b-99c6-2e6b9e284e44",
-  apiKey: "F3GCS56KVA4168HAN53YN31ASSVG",
+  project: "Default project",
+  apiKey: "WB2EG43V2745N3QP6A6RPRQ5D7X6",
 };
 const storybookUrl =
   "https://uber.github.io/react-vis/website/dist/storybook/iframe.html";
