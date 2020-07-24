@@ -1,0 +1,23 @@
+{
+  "name": "agent-codeceptjs-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@visual-regression-tracker/sdk-js": "^3.0.0",
+    "puppeteer": "^5.2.1"
+  },
+  "devDependencies": {
+    "@wdio/cli": "^6.3.4",
+    "@wdio/selenium-standalone-service": "^6.1.14",
+    "codeceptjs": "^2.6.6",
+    "playwright": "^1.2.1",
+    "testcafe": "^1.8.8",
+    "webdriver": "^6.3.0"
+  }
+}
