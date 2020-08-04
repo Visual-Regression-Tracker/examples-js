@@ -15,7 +15,7 @@ context('Visual Regression Tracker', () => {
     cy.track("With additional options", {
       os: "MacOS",
       device: "Cloud agent",
-      diffTollerancePercent: 0,
+      diffTollerancePercent: 2,
     })
   })
 })

@@ -1,10 +1,10 @@
 {
   "env": {
-    "vrt_config": {
+    "visualRegressionTracker": {
       "apiUrl": "http://localhost:4200",
       "branchName": "develop",
       "project": "Default project",
-      "apiKey": "XMPRH94KYZMXF9HTDV91EWZTB726"
+      "apiKey": "XHGDZDFD3GMJDNM87JKEMP0JS1G5"
     }
   }
 }
