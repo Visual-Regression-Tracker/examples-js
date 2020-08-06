@@ -2,19 +2,13 @@ Feature('');
 
 Scenario('test something', (I) => {
     I.amOnPage('https://github.com');
-    I.track('GitHub', {
+
+    I.track('Default');
+
+    I.track('Additional options', {
         os: "windows",
         device: 'device',
-        diffTollerancePercent: 0,
-    });
-
-    I.track('GitHub1', {
-        os: "windows",
-        diffTollerancePercent: 0,
-    });
-
-    I.track('GitHub2', {
-        device: 'device',
-        diffTollerancePercent: 0,
+        browser: 'chrome',
+        diffTollerancePercent: 13,
     });
 });
