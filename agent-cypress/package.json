@@ -10,6 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "@visual-regression-tracker/agent-cypress": "^3.0.2",
-    "cypress": "^4.9.0"
+    "cypress": "^4.11.0"
   }
 }
