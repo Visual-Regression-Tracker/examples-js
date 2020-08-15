@@ -1,14 +1,22 @@
-Feature('');
+Feature("");
 
-Scenario('test something', (I) => {
-    I.amOnPage('https://github.com');
+BeforeSuite((I) => {
+  I.vrtStart();
+});
 
-    I.track('Default');
+AfterSuite((I) => {
+  I.vrtStop();
+});
 
-    I.track('Additional options', {
-        os: "windows",
-        device: 'device',
-        browser: 'chrome',
-        diffTollerancePercent: 13,
-    });
+Scenario("test something", (I) => {
+  I.amOnPage("https://github.com");
+
+  I.vrtTrack("Default");
+
+  I.vrtTrack("Additional options", {
+    os: "windows",
+    device: "device",
+    browser: "chrome",
+    diffTollerancePercent: 13,
+  });
 });
