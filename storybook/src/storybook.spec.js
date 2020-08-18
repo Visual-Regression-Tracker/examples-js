@@ -13,25 +13,26 @@ const config = {
 };
 const storybookUrl =
   "https://uber.github.io/react-vis/website/dist/storybook/iframe.html";
+let browserType = chromium;
+let browser;
+let context;
+let page;
+let vrt;
+
+beforeAll(async () => {
+  browser = await browserType.launch();
+  context = await browser.newContext();
+  page = await context.newPage();
+  vrt = new PlaywrightVisualRegressionTracker(config, browserType);
+  await vrt.start();
+});
+
+afterAll(async () => {
+  await browser.close();
+  await vrt.stop();
+});
 
 describe("Storybook example", () => {
-  let browserType = chromium;
-  let browser;
-  let context;
-  let page;
-  let vrt;
-
-  beforeAll(async () => {
-    browser = await browserType.launch();
-    context = await browser.newContext();
-    page = await context.newPage();
-    vrt = new PlaywrightVisualRegressionTracker(config, browserType);
-  });
-
-  afterAll(async () => {
-    await browser.close();
-  });
-
   it("Signle area chart", async () => {
     const componentUrlParams =
       "?selectedKind=Series%2FAreaSeries%2FBase&selectedStory=Single%20Area%20chart";

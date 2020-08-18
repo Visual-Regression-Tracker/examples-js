@@ -1,4 +1,7 @@
 {
+  "baseUrl": "https://example.cypress.io",
+  "video": false,
+  "screenshotOnRunFailure": false,
   "env": {
     "visualRegressionTracker": {
       "apiUrl": "http://localhost:4200",
