@@ -43,7 +43,7 @@ exports.config = {
       apiUrl: "http://localhost:4200",
       branchName: "master",
       project: "Default project",
-      apiKey: "M7X93CSR67MH76NNKCQ6KDQS18K8",
+      apiKey: "CPKVK4JNK24NVNPNGVFQ853HXXEG",
     },
   },
   include: {

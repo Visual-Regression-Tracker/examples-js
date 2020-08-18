@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@visual-regression-tracker/agent-codeceptjs": "file:../../agent-codeceptjs",
+    "@visual-regression-tracker/agent-codeceptjs": "^4.0.0",
     "puppeteer": "^5.2.1"
   },
   "devDependencies": {
