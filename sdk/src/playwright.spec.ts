@@ -9,7 +9,7 @@ const config: Config = {
   apiUrl: "http://localhost:4200",
   branchName: "develop",
   project: "Default project",
-  apiKey: "M7X93CSR67MH76NNKCQ6KDQS18K8",
+  apiKey: "CPKVK4JNK24NVNPNGVFQ853HXXEG",
 };
 const vrt = new VisualRegressionTracker(config);
 

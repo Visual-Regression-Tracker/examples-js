@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@visual-regression-tracker/sdk-js": "^4.0.0"
+    "@visual-regression-tracker/sdk-js": "^4.0.1"
   },
   "devDependencies": {
     "@types/jest": "^25.2.1",
