@@ -9,7 +9,8 @@ const config = {
   apiUrl: "http://localhost:4200",
   branchName: "develop",
   project: "Default project",
-  apiKey: "CPKVK4JNK24NVNPNGVFQ853HXXEG",
+  apiKey: "M7X93CSR67MH76NNKCQ6KDQS18K8",
+  enableSoftAssert: true,
 };
 const storybookUrl =
   "https://uber.github.io/react-vis/website/dist/storybook/iframe.html";
