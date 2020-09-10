@@ -5,16 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test:sdk_playwright": "jest ./src/playwright.spec.ts",
-    "test": "jest"
+    "test": "jest --bail"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@visual-regression-tracker/sdk-js": "^4.1.1"
+    "@visual-regression-tracker/sdk-js": "^4.1.3"
   },
   "devDependencies": {
     "@types/jest": "^25.2.1",
-    "@types/node": "^13.13.16",
+    "@types/node": "^13.13.17",
+    "jasmine-fail-fast": "^2.0.1",
     "jest": "^25.0.0",
     "playwright": "^1.3.0",
     "ts-jest": "^25.5.1",

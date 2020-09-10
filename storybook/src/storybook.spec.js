@@ -20,20 +20,20 @@ let context;
 let page;
 let vrt;
 
-beforeAll(async () => {
-  browser = await browserType.launch();
-  context = await browser.newContext();
-  page = await context.newPage();
-  vrt = new PlaywrightVisualRegressionTracker(config, browserType);
-  await vrt.start();
-});
-
-afterAll(async () => {
-  await browser.close();
-  await vrt.stop();
-});
-
 describe("Storybook example", () => {
+  beforeAll(async () => {
+    browser = await browserType.launch();
+    context = await browser.newContext();
+    page = await context.newPage();
+    vrt = new PlaywrightVisualRegressionTracker(config, browserType);
+    await vrt.start();
+  });
+
+  afterAll(async () => {
+    await browser.close();
+    await vrt.stop();
+  });
+
   it("Signle area chart", async () => {
     const componentUrlParams =
       "?selectedKind=Series%2FAreaSeries%2FBase&selectedStory=Single%20Area%20chart";

@@ -19,20 +19,20 @@ let context: BrowserContext;
 let page: Page;
 let vrt: PlaywrightVisualRegressionTracker;
 
-beforeAll(async () => {
-  browser = await browserType.launch({ headless: false });
-  context = await browser.newContext();
-  page = await context.newPage();
-  vrt = new PlaywrightVisualRegressionTracker(config, browserType);
-  await vrt.start();
-});
-
-afterAll(async () => {
-  await browser.close();
-  await vrt.stop();
-});
-
 describe("Playwright example", () => {
+  beforeAll(async () => {
+    browser = await browserType.launch({ headless: false });
+    context = await browser.newContext();
+    page = await context.newPage();
+    vrt = new PlaywrightVisualRegressionTracker(config, browserType);
+    await vrt.start();
+  });
+
+  afterAll(async () => {
+    await browser.close();
+    await vrt.stop();
+  });
+
   beforeEach(async () => {
     await page.goto("https://google.com/");
   });

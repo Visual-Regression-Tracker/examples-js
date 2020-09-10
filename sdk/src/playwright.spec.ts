@@ -18,24 +18,24 @@ let browser: Browser;
 let context: BrowserContext;
 let page: Page;
 
-beforeAll(async () => {
-  browser = await chromium.launch({ headless: false });
-  context = await browser.newContext({
-    viewport: {
-      width: 800,
-      height: 600,
-    },
-  });
-  page = await context.newPage();
-  await vrt.start();
-});
-
-afterAll(async () => {
-  await browser.close();
-  await vrt.stop();
-});
-
 describe("Playwright example", () => {
+  beforeAll(async () => {
+    browser = await chromium.launch({ headless: false });
+    context = await browser.newContext({
+      viewport: {
+        width: 800,
+        height: 600,
+      },
+    });
+    page = await context.newPage();
+    await vrt.start();
+  });
+
+  afterAll(async () => {
+    await browser.close();
+    await vrt.stop();
+  });
+
   beforeEach(async () => {
     await page.goto("https://google.com/");
   });
