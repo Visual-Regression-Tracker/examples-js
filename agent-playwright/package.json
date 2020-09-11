@@ -9,14 +9,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@visual-regression-tracker/agent-playwright": "^4.1.0"
+    "@visual-regression-tracker/agent-playwright": "^4.2.0"
   },
   "devDependencies": {
     "@types/jest": "^25.2.1",
-    "@types/node": "^13.13.16",
+    "@types/node": "^13.13.18",
     "jasmine-fail-fast": "^2.0.1",
     "jest": "^25.0.0",
-    "playwright": "^1.3.0",
+    "playwright": "^1.4.0",
     "ts-jest": "^25.5.1",
     "typescript": "^3.9.7"
   }
