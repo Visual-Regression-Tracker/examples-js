@@ -9,7 +9,7 @@ const config: Config = {
   apiUrl: "http://localhost:4200",
   branchName: "develop",
   project: "Default project",
-  apiKey: "M7X93CSR67MH76NNKCQ6KDQS18K8",
+  apiKey: "4G16TTD8E54Q6DN1YSXVD8YHSCH3",
   enableSoftAssert: true,
 };
 
@@ -38,7 +38,12 @@ describe("Playwright example", () => {
   });
 
   it("Home page", async () => {
-    await vrt.track(page, "Home page");
+    await vrt.trackPage(page, "Home page");
+  });
+
+  it("Logo", async () => {
+    const logo = await page.$("#hplogo");
+    await vrt.trackElementHandle(logo, "Logo");
   });
 
   it("Search result page", async () => {
@@ -46,7 +51,7 @@ describe("Playwright example", () => {
     await page.press("[name='q']", "Enter");
     await page.waitForSelector("#search");
 
-    await vrt.track(page, "Search result page", {
+    await vrt.trackPage(page, "Search result page", {
       diffTollerancePercent: 0,
       screenshotOptions: {
         fullPage: false,
