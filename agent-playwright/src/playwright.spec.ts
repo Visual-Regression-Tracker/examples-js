@@ -53,6 +53,14 @@ describe("Playwright example", () => {
 
     await vrt.trackPage(page, "Search result page", {
       diffTollerancePercent: 0,
+      ignoreAreas: [
+        {
+          x: 0,
+          y: 0,
+          width: 800,
+          height: 500,
+        },
+      ],
       screenshotOptions: {
         fullPage: false,
       },
