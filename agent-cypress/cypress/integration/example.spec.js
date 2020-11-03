@@ -27,7 +27,15 @@ context("Visual Regression Tracker", () => {
     cy.vrtTrack("With additional options", {
       os: "MacOS",
       device: "Cloud agent",
-      diffTollerancePercent: 2,
+      diffTollerancePercent: 0,
+      ignoreAreas: [
+        {
+          x: 10,
+          y: 20,
+          width: 100,
+          height: 300,
+        },
+      ],
     });
   });
 });
