@@ -10,14 +10,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@visual-regression-tracker/sdk-js": "^4.2.0"
+    "@visual-regression-tracker/sdk-js": "^4.4.0"
   },
   "devDependencies": {
     "@types/jest": "^25.2.1",
-    "@types/node": "^13.13.18",
+    "@types/node": "^13.13.30",
     "jasmine-fail-fast": "^2.0.1",
     "jest": "^25.0.0",
-    "playwright": "^1.4.0",
+    "playwright": "^1.5.2",
     "ts-jest": "^25.5.1",
     "typescript": "^3.9.7"
   }

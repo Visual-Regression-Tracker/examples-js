@@ -9,7 +9,7 @@ const config: Config = {
   apiUrl: "http://localhost:4200",
   branchName: "develop",
   project: "Default project",
-  apiKey: "M7X93CSR67MH76NNKCQ6KDQS18K8",
+  apiKey: "4G16TTD8E54Q6DN1YSXVD8YHSCH3",
   enableSoftAssert: true,
 };
 const vrt = new VisualRegressionTracker(config);
@@ -64,6 +64,14 @@ describe("Playwright example", () => {
       viewport: "800x600",
       device: "PC",
       diffTollerancePercent: 0,
+      ignoreAreas: [
+        {
+          x: 100,
+          y: 300,
+          width: 600,
+          height: 700,
+        },
+      ],
     });
   });
 });
