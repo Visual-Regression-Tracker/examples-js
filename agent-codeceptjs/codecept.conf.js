@@ -43,8 +43,9 @@ exports.config = {
       apiUrl: "http://localhost:4200",
       branchName: "master",
       project: "Default project",
-      apiKey: "4G16TTD8E54Q6DN1YSXVD8YHSCH3",
+      apiKey: "0TK0P0NQP6MNFQQPTYYBN27JRAA5",
       enableSoftAssert: true,
+      ciBuildId: new Date().getTime().toString(36),
     },
   },
   include: {
