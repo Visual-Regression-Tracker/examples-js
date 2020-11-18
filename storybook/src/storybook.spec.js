@@ -9,8 +9,9 @@ const config = {
   apiUrl: "http://localhost:4200",
   branchName: "develop",
   project: "Default project",
-  apiKey: "M7X93CSR67MH76NNKCQ6KDQS18K8",
+  apiKey: "0TK0P0NQP6MNFQQPTYYBN27JRAA5",
   enableSoftAssert: true,
+  ciBuildId: new Date().getTime().toString(36),
 };
 const storybookUrl =
   "https://uber.github.io/react-vis/website/dist/storybook/iframe.html";
@@ -40,7 +41,7 @@ describe("Storybook example", () => {
 
     await page.goto(storybookUrl + componentUrlParams);
 
-    await vrt.track(page, "Single area chart");
+    await vrt.trackPage(page, "Single area chart");
   });
 
   it.each([
@@ -63,6 +64,6 @@ describe("Storybook example", () => {
   ])("%s", async (componentName, componentUrlParams) => {
     await page.goto(storybookUrl + componentUrlParams);
 
-    await vrt.track(page, componentName);
+    await vrt.trackPage(page, componentName);
   });
 });
