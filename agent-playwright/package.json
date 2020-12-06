@@ -9,11 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@visual-regression-tracker/agent-playwright": "^4.5.0"
+    "@visual-regression-tracker/agent-playwright": "^4.6.1"
   },
   "devDependencies": {
     "@types/jest": "^25.2.1",
-    "@types/node": "^13.13.31",
+    "@types/node": "^13.13.34",
     "jasmine-fail-fast": "^2.0.1",
     "jest": "^25.0.0",
     "playwright": "^1.6.2",
