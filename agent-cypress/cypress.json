@@ -5,15 +5,5 @@
   "retries": {
     "runMode": 1,
     "openMode": 3
-  },
-  "env": {
-    "visualRegressionTracker": {
-      "apiUrl": "http://localhost:4200",
-      "branchName": "develop",
-      "project": "Default project",
-      "apiKey": "0TK0P0NQP6MNFQQPTYYBN27JRAA5",
-      "enableSoftAssert": true,
-      "ciBuildId": "someBuild ID"
-    }
   }
 }
