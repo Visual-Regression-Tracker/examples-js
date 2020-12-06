@@ -9,15 +9,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@visual-regression-tracker/agent-codeceptjs": "^4.5.0",
+    "@visual-regression-tracker/agent-codeceptjs": "^4.6.0",
     "puppeteer": "^5.5.0"
   },
   "devDependencies": {
-    "@wdio/cli": "^6.9.0",
-    "@wdio/selenium-standalone-service": "^6.9.0",
+    "@wdio/cli": "^6.10.5",
+    "@wdio/selenium-standalone-service": "^6.10.4",
     "codeceptjs": "^2.6.11",
     "playwright": "^1.6.2",
     "testcafe": "^1.9.4",
-    "webdriver": "^6.9.0"
+    "webdriver": "^6.10.4"
   }
 }
