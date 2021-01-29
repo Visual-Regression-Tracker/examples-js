@@ -2,5 +2,5 @@
 
 - Clone repo
 - Install dependencies `npm install`
-- Update environment variables in `cypress.json`
+- Update configuration
 - Run test `npx cypress open`
