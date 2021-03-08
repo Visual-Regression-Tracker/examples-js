@@ -20,7 +20,9 @@ context("Visual Regression Tracker", () => {
 
   it("Separate element example", () => {
     cy.get("#navbar").vrtTrack("Separate element1");
-    cy.get("#navbar").vrtTrack("Separate element2");
+    cy.get("#navbar").vrtTrack("Separate element2", {
+      retryLimit: 0,
+    });
   });
 
   it("Additional options example", () => {

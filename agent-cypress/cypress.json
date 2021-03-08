@@ -4,6 +4,6 @@
   "screenshotOnRunFailure": false,
   "retries": {
     "runMode": 1,
-    "openMode": 3
+    "openMode": 0
   }
 }
