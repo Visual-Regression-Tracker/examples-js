@@ -1,7 +1,8 @@
 {
-  "apiUrl": "http://localhost:4200",
-  "project": "Default project",
-  "apiKey": "TKK10591GN4PXDMT99T5JPZSRG93",
+  "apiUrl": "http://abseitsspass.hob:4200",
+  "apiKey": "ZW8JEQX1J74XVEGJN7AH80SYEAWD",
+  "project": "3eb859fa-07dc-4e5e-98f0-1ae0a88bec51",
   "branchName": "master",
-  "enableSoftAssert": false
+  "ciBuildId": "commit_sha",
+  "enableSoftAssert": true
 }

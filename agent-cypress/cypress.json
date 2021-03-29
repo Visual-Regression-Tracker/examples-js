@@ -1,5 +1,5 @@
 {
-  "baseUrl": "https://example.cypress.io",
+  "baseUrl": "https://www.gom.com/",
   "video": false,
   "screenshotOnRunFailure": false,
   "retries": {
