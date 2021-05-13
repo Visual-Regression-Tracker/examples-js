@@ -17,7 +17,8 @@
     "@types/node": "^13.13.34",
     "jasmine-fail-fast": "^2.0.1",
     "jest": "^25.0.0",
-    "playwright": "^1.6.2",
+    "playwright": "^1.10.0",
+    "playwright-chromium": "^1.10.0",
     "ts-jest": "^25.5.1",
     "typescript": "^3.9.7"
   }
