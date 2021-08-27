@@ -33,7 +33,7 @@ describe("Playwright example", () => {
   it("Home page", async () => {
     await vrt.track({
       name: "Home page",
-      imageBase64: (await page.screenshot()).toString("base64"),
+      imageBuffer: await page.screenshot(),
     });
   });
 
@@ -44,11 +44,9 @@ describe("Playwright example", () => {
 
     await vrt.track({
       name: "Search result page",
-      imageBase64: (
-        await page.screenshot({
-          fullPage: false,
-        })
-      ).toString("base64"),
+      imageBuffer: await page.screenshot({
+        fullPage: false,
+      }),
       os: "Mac",
       browser: "Chrome",
       viewport: "800x600",
