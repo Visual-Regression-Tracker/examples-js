@@ -1,5 +1,5 @@
 {
-  "baseUrl": "https://www.gom.com/",
+  "baseUrl": "https://www.google.com/",
   "video": false,
   "screenshotOnRunFailure": false,
   "retries": {
