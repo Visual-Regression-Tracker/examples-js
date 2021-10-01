@@ -1,44 +1,42 @@
-import { chromium, Browser, Page, BrowserContext } from "playwright";
-import {
-  PlaywrightVisualRegressionTracker,
-  Config,
-} from "@visual-regression-tracker/agent-playwright";
-jest.setTimeout(30000);
+import { test as base } from "@playwright/test";
+import { PlaywrightVisualRegressionTracker } from "@visual-regression-tracker/agent-playwright";
 
-let browserType = chromium;
-let browser: Browser;
-let context: BrowserContext;
-let page: Page;
-let vrt: PlaywrightVisualRegressionTracker;
+type TestFixtures = {
+  vrt: PlaywrightVisualRegressionTracker;
+};
 
-describe("Playwright example", () => {
-  beforeAll(async () => {
-    browser = await browserType.launch({ headless: false });
-    context = await browser.newContext();
-    page = await context.newPage();
-    vrt = new PlaywrightVisualRegressionTracker(browserType);
-    await vrt.start();
-  });
+const test = base.extend<{}, TestFixtures>({
+  vrt: [
+    async ({ browserName }, use) => {
+      await use(new PlaywrightVisualRegressionTracker(browserName));
+    },
+    { scope: "worker" },
+  ],
+});
 
-  afterAll(async () => {
-    await browser.close();
-    await vrt.stop();
-  });
+test.beforeAll(async ({ vrt }) => {
+  await vrt.start();
+});
 
-  beforeEach(async () => {
+test.afterAll(async ({ vrt }) => {
+  await vrt.stop();
+});
+
+test.describe("Visual test", () => {
+  test.beforeEach(async ({ page }) => {
     await page.goto("https://google.com/");
   });
 
-  it("Home page", async () => {
+  test("Home page", async ({ page, vrt }) => {
     await vrt.trackPage(page, "Home page");
   });
 
-  it("Logo", async () => {
-    const logo = await page.$("#hplogo");
+  test("Logo", async ({ page, vrt }) => {
+    const logo = await page.$("[alt='Google']");
     await vrt.trackElementHandle(logo, "Logo");
   });
 
-  it("Search result page", async () => {
+  test("Search result page", async ({ page, vrt }) => {
     await page.type("[name='q']", "Visual regression tracker");
     await page.press("[name='q']", "Enter");
     await page.waitForSelector("#search");
