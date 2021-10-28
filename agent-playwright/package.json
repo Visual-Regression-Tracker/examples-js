@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --bail"
+    "test": "VRT_CIBUILDID=$(date +%H:%M:%S_%d-%m-%Y) playwright test"
   },
   "author": "",
   "license": "ISC",

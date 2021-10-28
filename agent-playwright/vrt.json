@@ -2,7 +2,5 @@
   "apiUrl": "http://localhost:4200",
   "apiKey": "2QZBXPMH7DM5MJNV6831E9MXVFQQ",
   "project": "9bb62347-1444-481e-830c-e71b63870eb8",
-  "branchName": "master",
-  "enableSoftAssert": false,
-  "ciBuildId": "generated key"
+  "branchName": "develop"
 }
