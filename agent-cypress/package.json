@@ -2,14 +2,13 @@
   "name": "@visual-regression-tracker/cypress-examples",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "cypress run"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@visual-regression-tracker/agent-cypress": "^5.1.0",
-    "cypress": "^8.3.1"
+    "cypress": "^9"
   }
 }
