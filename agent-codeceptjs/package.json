@@ -17,7 +17,7 @@
     "@wdio/selenium-standalone-service": "^6.10.4",
     "codeceptjs": "^2.6.11",
     "playwright": "^1.6.2",
-    "testcafe": "^1.9.4",
+    "testcafe": "^1.20.1",
     "webdriver": "^6.10.4"
   }
 }
