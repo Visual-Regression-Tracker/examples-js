@@ -6,7 +6,7 @@
     "test": "cypress run"
   },
   "author": "",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "dependencies": {
     "@visual-regression-tracker/agent-cypress": "^5.1.0",
     "cypress": "^9"
