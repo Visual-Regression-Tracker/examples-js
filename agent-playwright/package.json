@@ -7,7 +7,7 @@
     "test": "VRT_CIBUILDID=$(date +%H:%M:%S_%d-%m-%Y) playwright test"
   },
   "author": "",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "dependencies": {
     "@visual-regression-tracker/agent-playwright": "^5.1.0"
   },
