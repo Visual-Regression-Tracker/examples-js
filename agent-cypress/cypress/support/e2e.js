@@ -24,15 +24,7 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 import {
-  addVrtStartCommand,
-  addVrtTrackCommand,
-  addVrtStopCommand,
-  addVrtTrackBufferCommand,
-  addVrtTrackBase64Command,
-} from "@visual-regression-tracker/agent-cypress/dist/commands";
+  addVrtCommands,
+} from "@visual-regression-tracker/agent-cypress";
 
-addVrtStartCommand();
-addVrtTrackCommand();
-addVrtStopCommand();
-addVrtTrackBufferCommand();
-addVrtTrackBase64Command();
+addVrtCommands();
