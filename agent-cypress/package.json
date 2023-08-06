@@ -9,7 +9,7 @@
   "author": "",
   "license": "Apache-2.0",
   "dependencies": {
-    "@visual-regression-tracker/agent-cypress": "*",
+    "@visual-regression-tracker/agent-cypress": "^5.7.0",
     "cypress": "^12.17.3"
   }
 }
