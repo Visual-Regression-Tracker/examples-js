@@ -15,7 +15,7 @@
   "devDependencies": {
     "@wdio/cli": "^6.10.5",
     "@wdio/selenium-standalone-service": "^6.10.4",
-    "codeceptjs": "^2.6.11",
+    "codeceptjs": "^3.0.0",
     "playwright": "^1.6.2",
     "testcafe": "^1.9.4",
     "webdriver": "^6.10.4"
