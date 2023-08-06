@@ -1,9 +1,0 @@
-{
-  "baseUrl": "https://www.google.com/",
-  "video": false,
-  "screenshotOnRunFailure": false,
-  "retries": {
-    "runMode": 1,
-    "openMode": 0
-  }
-}
