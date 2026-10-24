@@ -26,7 +26,7 @@ describe("Storybook example", () => {
     browser = await browserType.launch();
     context = await browser.newContext();
     page = await context.newPage();
-    vrt = new PlaywrightVisualRegressionTracker(browserType, config);
+    vrt = new PlaywrightVisualRegressionTracker(browserType.name(), config);
     await vrt.start();
   });
 
