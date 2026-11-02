@@ -3,13 +3,12 @@
   "private": true,
   "license": "Apache-2.0",
   "scripts": {
-    "test": "jest"
+    "test": "node --test src/*.spec.js"
   },
   "dependencies": {
     "@visual-regression-tracker/agent-playwright": "^5.4.0"
   },
   "devDependencies": {
-    "jest": "^30.5.2",
     "playwright": "^1.64.1"
   }
 }

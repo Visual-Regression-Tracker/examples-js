@@ -2,19 +2,17 @@
   "name": "sdk-example",
   "private": true,
   "license": "Apache-2.0",
+  "type": "module",
   "scripts": {
-    "test": "jest",
+    "test": "node --test src/*.spec.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@visual-regression-tracker/sdk-js": "^5.8.0"
+    "@visual-regression-tracker/sdk-js": "^5.8.1"
   },
   "devDependencies": {
-    "@types/jest": "^30.0.0",
     "@types/node": "^24.0.0",
-    "jest": "^30.5.2",
     "playwright": "^1.64.1",
-    "ts-jest": "^29.4.15",
-    "typescript": "^5.9.3"
+    "typescript": "^7.0.2"
   }
 }

@@ -9,13 +9,4 @@ export default defineConfig({
     },
   },
   screenshotOnRunFailure: false,
-  env: {
-    visualRegressionTracker: {
-      apiUrl: "http://localhost:4200",
-      apiKey: "DEFAULTUSERAPIKEYTOBECHANGED",
-      project: "Default project",
-      branchName: "master",
-      enableSoftAssert: true,
-    },
-  },
 });
