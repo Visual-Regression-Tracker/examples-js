@@ -1,4 +1,4 @@
-describe("Test", () => {
+describe("Visual test", () => {
   before(() => {
     cy.vrtStart();
   });
@@ -7,12 +7,12 @@ describe("Test", () => {
     cy.vrtStop();
   });
 
-  it(`VRT Test`, function () {
+  it("tracks the page, an element and a fixture", () => {
     cy.visit("/");
 
     cy.vrtTrack("Home page");
 
-    cy.get("[name='q']").vrtTrack("Search field");
+    cy.get("h1.heading").vrtTrack("Heading");
 
     cy.fixture("test.png").then((logo) => {
       cy.vrtTrackBase64("Fixture image", logo);

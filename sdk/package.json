@@ -1,25 +1,20 @@
 {
-  "name": "core",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test:sdk_playwright": "jest ./src/playwright.spec.ts",
-    "test": "jest --bail"
-  },
-  "author": "",
+  "name": "sdk-example",
+  "private": true,
   "license": "Apache-2.0",
+  "scripts": {
+    "test": "jest",
+    "typecheck": "tsc --noEmit"
+  },
   "dependencies": {
-    "@visual-regression-tracker/sdk-js": "^5.1.0"
+    "@visual-regression-tracker/sdk-js": "^5.8.0"
   },
   "devDependencies": {
-    "@types/jest": "^25.2.1",
-    "@types/node": "^13.13.52",
-    "jasmine-fail-fast": "^2.0.1",
-    "jest": "^25.0.0",
-    "playwright": "^1.14.1",
-    "playwright-chromium": "^1.14.1",
-    "ts-jest": "^25.5.1",
-    "typescript": "^3.9.10"
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.0.0",
+    "jest": "^30.5.2",
+    "playwright": "^1.64.1",
+    "ts-jest": "^29.4.15",
+    "typescript": "^5.9.3"
   }
 }

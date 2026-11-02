@@ -1,0 +1,54 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directories:
+      - "/agent-codeceptjs"
+      - "/agent-cypress"
+      - "/agent-playwright"
+      - "/sdk"
+      - "/storybook"
+    schedule:
+      interval: weekly
+    ignore:
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
+      # ts-jest supports TypeScript < 7 only
+      - dependency-name: "typescript"
+        update-types: ["version-update:semver-major"]
+      # agent-codeceptjs 4.x relies on CodeceptJS 3 globals
+      - dependency-name: "codeceptjs"
+        update-types: ["version-update:semver-major"]
+    groups:
+      npm-minor-patch:
+        patterns:
+          - "*"
+        update-types:
+          - minor
+          - patch
+      npm-major:
+        patterns:
+          - "*"
+        update-types:
+          - major
+      npm-security:
+        applies-to: security-updates
+        patterns:
+          - "*"
+
+  - package-ecosystem: docker-compose
+    directory: "/.github/vrt"
+    schedule:
+      interval: weekly
+    groups:
+      docker:
+        patterns:
+          - "*"
+
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+    groups:
+      github-actions:
+        patterns:
+          - "*"

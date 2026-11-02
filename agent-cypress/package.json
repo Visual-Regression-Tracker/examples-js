@@ -1,15 +1,13 @@
 {
-  "name": "@visual-regression-tracker/cypress-examples",
-  "version": "1.0.0",
-  "description": "",
+  "name": "agent-cypress-example",
+  "private": true,
+  "license": "Apache-2.0",
   "type": "module",
   "scripts": {
     "test": "cypress run"
   },
-  "author": "",
-  "license": "Apache-2.0",
   "dependencies": {
-    "@visual-regression-tracker/agent-cypress": "^5.7.0",
-    "cypress": "^12.17.3"
+    "@visual-regression-tracker/agent-cypress": "^5.8.0",
+    "cypress": "^16.2.1"
   }
 }
