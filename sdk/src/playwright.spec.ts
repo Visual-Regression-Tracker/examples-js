@@ -1,23 +1,17 @@
-import { chromium, Browser, Page, BrowserContext } from "playwright";
+import { chromium, Browser, Page } from "playwright";
 import { VisualRegressionTracker } from "@visual-regression-tracker/sdk-js";
+
 jest.setTimeout(30000);
 
 const vrt = new VisualRegressionTracker();
 
 let browser: Browser;
-let context: BrowserContext;
 let page: Page;
 
 describe("Playwright example", () => {
   beforeAll(async () => {
-    browser = await chromium.launch({ headless: false });
-    context = await browser.newContext({
-      viewport: {
-        width: 800,
-        height: 600,
-      },
-    });
-    page = await context.newPage();
+    browser = await chromium.launch();
+    page = await browser.newPage({ viewport: { width: 800, height: 600 } });
     await vrt.start();
   });
 
@@ -27,7 +21,7 @@ describe("Playwright example", () => {
   });
 
   beforeEach(async () => {
-    await page.goto("https://google.com/");
+    await page.goto("https://the-internet.herokuapp.com/");
   });
 
   it("Home page", async () => {
@@ -37,29 +31,19 @@ describe("Playwright example", () => {
     });
   });
 
-  it("Search result page", async () => {
-    await page.type("[name='q']", "Visual regression tracker");
-    await page.press("[name='q']", "Enter");
-    await page.waitForSelector("#search");
+  it("Checkboxes page", async () => {
+    await page.getByRole("link", { name: "Checkboxes" }).click();
+    await page.getByRole("checkbox").first().check();
 
     await vrt.track({
-      name: "Search result page",
-      imageBuffer: await page.screenshot({
-        fullPage: false,
-      }),
-      os: "Mac",
-      browser: "Chrome",
+      name: "Checkboxes page",
+      imageBuffer: await page.screenshot(),
+      os: process.platform,
+      browser: "chromium",
       viewport: "800x600",
       device: "PC",
       diffTollerancePercent: 0,
-      ignoreAreas: [
-        {
-          x: 100,
-          y: 300,
-          width: 600,
-          height: 700,
-        },
-      ],
+      ignoreAreas: [{ x: 0, y: 500, width: 800, height: 100 }],
     });
   });
 });

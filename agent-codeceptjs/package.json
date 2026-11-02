@@ -1,23 +1,20 @@
 {
   "name": "agent-codeceptjs-example",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
+  "private": true,
   "license": "Apache-2.0",
+  "scripts": {
+    "test": "codeceptjs run --steps"
+  },
   "dependencies": {
-    "@visual-regression-tracker/agent-codeceptjs": "^4.6.0",
-    "puppeteer": "^5.5.0"
+    "@visual-regression-tracker/agent-codeceptjs": "^4.6.1"
   },
   "devDependencies": {
-    "@wdio/cli": "^6.10.5",
-    "@wdio/selenium-standalone-service": "^6.10.4",
-    "codeceptjs": "^2.6.11",
-    "playwright": "^1.6.2",
-    "testcafe": "^1.9.4",
-    "webdriver": "^6.10.4"
+    "codeceptjs": "^3.7.9",
+    "webdriverio": "^9.32.0"
+  },
+  "overrides": {
+    "@visual-regression-tracker/agent-codeceptjs": {
+      "@visual-regression-tracker/sdk-js": "^5.8.0"
+    }
   }
 }

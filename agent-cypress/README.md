@@ -1,6 +1,5 @@
-# How to use
+# agent-cypress
 
-- Clone repo
-- Install dependencies `npm install`
-- Update configuration
-- Run test `npx cypress open`
+- Install dependencies: `npm install`
+- Set the connection in `cypress.config.js` (`env.visualRegressionTracker`)
+- Run the tests: `npm test`, or `npx cypress open`

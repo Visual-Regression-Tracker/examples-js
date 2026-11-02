@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  example:
+    name: ${{ matrix.example }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        example: [sdk, agent-playwright, storybook, agent-cypress, agent-codeceptjs]
+    defaults:
+      run:
+        working-directory: ${{ matrix.example }}
+    steps:
+      - uses: actions/checkout@v7
+      - name: Start Visual Regression Tracker
+        working-directory: .github/vrt
+        run: docker compose up -d --quiet-pull
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: ${{ matrix.example }}/package-lock.json
+      - run: npm ci
+      - if: contains(fromJSON('["sdk", "agent-playwright", "storybook"]'), matrix.example)
+        run: npx playwright install --with-deps chromium
+      - if: matrix.example == 'agent-cypress'
+        run: npx cypress install
+      - run: npm run typecheck --if-present
+      - name: Wait for Visual Regression Tracker
+        run: timeout 180 bash -c 'until curl -s -o /dev/null http://localhost:4200; do sleep 2; done'
+      - run: npm test
