@@ -3,7 +3,7 @@
   "private": true,
   "license": "Apache-2.0",
   "scripts": {
-    "test": "node --test src/*.spec.js"
+    "test": "node --test --test-timeout=30000 src/*.spec.js"
   },
   "dependencies": {
     "@visual-regression-tracker/agent-playwright": "^5.4.0"

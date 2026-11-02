@@ -4,7 +4,7 @@
   "license": "Apache-2.0",
   "type": "module",
   "scripts": {
-    "test": "node --test src/*.spec.ts",
+    "test": "node --test --test-timeout=30000 src/*.spec.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
