@@ -1,7 +1,6 @@
-import { chromium, Browser, Page } from "playwright";
+import { after, before, beforeEach, describe, it } from "node:test";
+import { chromium, type Browser, type Page } from "playwright";
 import { VisualRegressionTracker } from "@visual-regression-tracker/sdk-js";
-
-jest.setTimeout(30000);
 
 const vrt = new VisualRegressionTracker();
 
@@ -9,14 +8,14 @@ let browser: Browser;
 let page: Page;
 
 describe("Playwright example", () => {
-  beforeAll(async () => {
+  before(async () => {
     browser = await chromium.launch();
     page = await browser.newPage({ viewport: { width: 800, height: 600 } });
     await vrt.start();
   });
 
-  afterAll(async () => {
-    await browser.close();
+  after(async () => {
+    await browser?.close();
     await vrt.stop();
   });
 

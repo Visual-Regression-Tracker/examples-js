@@ -9,11 +9,9 @@ updates:
       - "/storybook"
     schedule:
       interval: weekly
+    open-pull-requests-limit: 5
     ignore:
       - dependency-name: "@types/node"
-        update-types: ["version-update:semver-major"]
-      # ts-jest supports TypeScript < 7 only
-      - dependency-name: "typescript"
         update-types: ["version-update:semver-major"]
       # agent-codeceptjs 4.x relies on CodeceptJS 3 globals
       - dependency-name: "codeceptjs"
@@ -39,6 +37,7 @@ updates:
     directory: "/.github/vrt"
     schedule:
       interval: weekly
+    open-pull-requests-limit: 5
     groups:
       docker:
         patterns:
@@ -48,6 +47,7 @@ updates:
     directory: "/"
     schedule:
       interval: weekly
+    open-pull-requests-limit: 5
     groups:
       github-actions:
         patterns:

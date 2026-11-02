@@ -23,6 +23,12 @@ jobs:
     defaults:
       run:
         working-directory: ${{ matrix.example }}
+    env:
+      VRT_APIURL: http://localhost:4200
+      VRT_APIKEY: DEFAULTUSERAPIKEYTOBECHANGED
+      VRT_PROJECT: Default project
+      VRT_BRANCHNAME: master
+      VRT_ENABLESOFTASSERT: "true"
     steps:
       - uses: actions/checkout@v7
       - name: Start Visual Regression Tracker
