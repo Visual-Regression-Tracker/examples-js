@@ -15,7 +15,7 @@ describe("Playwright example", () => {
   });
 
   after(async () => {
-    await browser.close();
+    await browser?.close();
     await vrt.stop();
   });
 

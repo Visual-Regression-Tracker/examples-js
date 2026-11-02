@@ -19,8 +19,8 @@ describe("Storybook example", () => {
   });
 
   after(async () => {
-    await browser.close();
-    await vrt.stop();
+    await browser?.close();
+    await vrt?.stop();
   });
 
   it("Single area chart", async () => {
