@@ -5,6 +5,7 @@ services:
       DATABASE_URL: postgresql://vrt:vrt@postgres:5432/vrt
       JWT_SECRET: ci
       APP_FRONTEND_URL: http://localhost:8080
+      BODY_PARSER_JSON_LIMIT: 5mb
     ports:
       - "4200:3000"
     depends_on:
