@@ -19,8 +19,9 @@ Scenario("tracks a page with and without options", ({ I }) => {
   I.vrtTrack("Inputs page", {
     os: process.platform,
     device: "PC",
-    browser: "chrome",
+    browser: "chromium",
     diffTollerancePercent: 0,
     ignoreAreas: [{ x: 10, y: 10, width: 100, height: 200 }],
+    fullScreen: true,
   });
 });

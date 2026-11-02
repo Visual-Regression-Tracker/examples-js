@@ -2,13 +2,10 @@ exports.config = {
   tests: "./*_test.js",
   output: "./output",
   helpers: {
-    WebDriver: {
+    Playwright: {
       url: "https://the-internet.herokuapp.com",
-      browser: "chrome",
+      browser: "chromium",
       windowSize: "1280x720",
-      desiredCapabilities: {
-        "goog:chromeOptions": { args: ["--headless=new"] },
-      },
     },
     VisualRegressionTrackerHelper: {
       require: "@visual-regression-tracker/agent-codeceptjs",

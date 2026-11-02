@@ -1,10 +1,8 @@
-# agent-codeceptjs with the WebDriver helper
+# agent-codeceptjs with the Playwright helper
 
-- Install dependencies: `npm install` (WebDriver downloads a matching chromedriver on the first run)
+- Install dependencies: `npm install`, then `npx playwright install chromium`
 - Set the connection in `codecept.conf.js` (`helpers.VisualRegressionTrackerHelper`)
 - Run the tests: `npm test`
 - Editor autocompletion for `I`: `npx codeceptjs def`
 
-agent-codeceptjs 4.6.1 needs a helper whose `saveScreenshot` returns the image,
-which in CodeceptJS 3 is `WebDriver`; it takes full-page screenshots there.
-`overrides` in `package.json` moves the agent onto sdk-js 5.
+CodeceptJS 4 needs Node.js 22.12 or later.
