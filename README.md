@@ -6,7 +6,7 @@ Each folder is a separate project with its own `package.json` and README. The ex
 | ------------------------------------ | ------------------------------------------------- | --------------------------------------------------------------------------------- |
 | [agent-playwright](agent-playwright) | Playwright Test (TypeScript), one build per run   | [agent-playwright](https://github.com/Visual-Regression-Tracker/agent-playwright) |
 | [agent-cypress](agent-cypress)       | Cypress                                           | [agent-cypress](https://github.com/Visual-Regression-Tracker/agent-cypress)       |
-| [agent-codeceptjs](agent-codeceptjs) | CodeceptJS 3 with the WebDriver helper            | [agent-codeceptjs](https://github.com/Visual-Regression-Tracker/agent-codeceptjs) |
+| [agent-codeceptjs](agent-codeceptjs) | CodeceptJS 4 with the Playwright helper           | [agent-codeceptjs](https://github.com/Visual-Regression-Tracker/agent-codeceptjs) |
 | [storybook](storybook)               | Storybook stories with Playwright                 | [agent-playwright](https://github.com/Visual-Regression-Tracker/agent-playwright) |
 | [sdk](sdk)                           | Playwright library (TypeScript), the SDK directly | [sdk-js](https://github.com/Visual-Regression-Tracker/sdk-js)                     |
 

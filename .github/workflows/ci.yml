@@ -40,7 +40,7 @@ jobs:
           cache: npm
           cache-dependency-path: ${{ matrix.example }}/package-lock.json
       - run: npm ci
-      - if: contains(fromJSON('["sdk", "agent-playwright", "storybook"]'), matrix.example)
+      - if: contains(fromJSON('["sdk", "agent-playwright", "storybook", "agent-codeceptjs"]'), matrix.example)
         run: npx playwright install --with-deps chromium
       - if: matrix.example == 'agent-cypress'
         run: npx cypress install

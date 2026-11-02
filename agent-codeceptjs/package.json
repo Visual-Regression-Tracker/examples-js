@@ -6,15 +6,10 @@
     "test": "codeceptjs run --steps"
   },
   "dependencies": {
-    "@visual-regression-tracker/agent-codeceptjs": "^4.6.1"
+    "@visual-regression-tracker/agent-codeceptjs": "^5.0.0"
   },
   "devDependencies": {
-    "codeceptjs": "^3.7.9",
-    "webdriverio": "^9.32.0"
-  },
-  "overrides": {
-    "@visual-regression-tracker/agent-codeceptjs": {
-      "@visual-regression-tracker/sdk-js": "^5.8.0"
-    }
+    "codeceptjs": "^4.2.2",
+    "playwright": "^1.64.1"
   }
 }
