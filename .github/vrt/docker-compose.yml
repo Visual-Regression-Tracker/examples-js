@@ -1,6 +1,6 @@
 services:
   api:
-    image: visualregressiontracker/api:6.0.0-rc1
+    image: visualregressiontracker/api:${VRT_VERSION}
     environment:
       DATABASE_URL: postgresql://vrt:vrt@postgres:5432/vrt
       JWT_SECRET: ci
@@ -12,7 +12,7 @@ services:
       migration:
         condition: service_completed_successfully
   migration:
-    image: visualregressiontracker/migration:6.0.0-rc1
+    image: visualregressiontracker/migration:${VRT_VERSION}
     environment:
       DATABASE_URL: postgresql://vrt:vrt@postgres:5432/vrt
       DEFAULT_USER_EMAIL: visual-regression-tracker@example.com
