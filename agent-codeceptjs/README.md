@@ -5,4 +5,4 @@
 - Run the tests: `npm test`
 - Editor autocompletion for `I`: `npx codeceptjs def`
 
-CodeceptJS 4 needs Node.js 22.12 or later.
+agent-codeceptjs 6 needs Node.js 26 or later.

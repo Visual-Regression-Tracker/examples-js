@@ -4,7 +4,7 @@
 
 ## Prerequisites
 
-- Node.js 22 or later
+- Node.js 26 or later
 - A running [Visual Regression Tracker](https://github.com/Visual-Regression-Tracker/Visual-Regression-Tracker) 6.0 server and its API key
 
 ## Setup
