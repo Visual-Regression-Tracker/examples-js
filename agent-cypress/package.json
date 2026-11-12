@@ -7,7 +7,7 @@
     "test": "cypress run"
   },
   "dependencies": {
-    "@visual-regression-tracker/agent-cypress": "^5.8.0",
+    "@visual-regression-tracker/agent-cypress": "^6.0.0",
     "cypress": "^16.2.1"
   }
 }
