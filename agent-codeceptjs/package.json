@@ -6,11 +6,11 @@
     "test": "codeceptjs run --steps"
   },
   "dependencies": {
-    "@visual-regression-tracker/agent-codeceptjs": "^6.0.0"
+    "@visual-regression-tracker/agent-codeceptjs": "^6.0.1"
   },
   "devDependencies": {
-    "codeceptjs": "^4.2.3",
-    "playwright": "^1.65.0"
+    "codeceptjs": "^4.2.4",
+    "playwright": "^1.65.1"
   },
   "overrides": {
     "glob": "^14.0.2",
